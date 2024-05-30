@@ -26,7 +26,7 @@ export default function RootLayout({
            
             <div className=" w-full ">
             <Navbar/>
-              <main className="mt-16 p-8 bg-white  min-h-screen">{children}</main>
+              <main className="mt-16 p-8 bg-white  min-h-screen ml-52">{children}</main>
             </div>
         </div>
         
