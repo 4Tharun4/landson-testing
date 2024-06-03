@@ -28,7 +28,7 @@ export default function RootLayout({
             <Navbar/>
             <Footer/>
           
-              <main className="pt-16  mobile:p-0 p-8 bg-slate-100  min-h-screen ml-52 mobile:ml-0 ">{children}</main>
+              <main className="pt-16  mobile:p-0 p-8 bg-slate-100  mobile:mt-10  min-h-screen ml-52 mobile:ml-0 ">{children}</main>
             </div>
         </div>
         
