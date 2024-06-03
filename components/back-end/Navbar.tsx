@@ -1,13 +1,21 @@
 "use client"
 
 import React from 'react'
+import Logo from '../../app/Assets/logo.png'
+import Image from 'next/image'
+import Link from 'next/link'
 
 
 export default function Navbar() {
   return (
     <>
-    <div className=' flex justify-between items-center   h-16 px-8 py-4 fixed top-0  w-full bg-green-400'>
-        <div className="menu-icon">
+   
+    <div className=' flex justify-between items-center   h-16 px-8 py-4 fixed top-0  w-full  bg-Navbg '>
+      
+
+        <div className="menu-icon flex gap-3">
+          <Link href="/dashboard">
+        <Image src={Logo} alt='logo' width={101} height={101}/></Link>
             <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-align-justify"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg></button>
         </div>
         <div className="right-icons   space-x-4 flex">

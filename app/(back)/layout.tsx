@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import Slidebar from '../../components/back-end/Sidebar'
 import Navbar from "@/components/back-end/Navbar";
-
+import Footer from '../../components/back-end/Fotter'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,13 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex gap-1">
+        <div className="flex gap-1 font-Primary-font">
            
                 <Slidebar/>
            
             <div className=" w-full ">
             <Navbar/>
-              <main className="mt-16 p-8 bg-white  min-h-screen ml-52">{children}</main>
+            <Footer/>
+          
+              <main className="pt-16  mobile:p-0 p-8 bg-slate-100  min-h-screen ml-52 mobile:ml-0 ">{children}</main>
             </div>
         </div>
         
