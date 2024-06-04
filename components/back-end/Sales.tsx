@@ -1,8 +1,59 @@
+"use client"
 import React from 'react'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top' as const,
+    },
+    title: {
+      display: true,
+      text: 'Chart.js Bar Chart',
+    },
+  },
+};
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+export const data = {
+  labels,
+  datasets: [
+    {
+      label: 'Dataset 1',
+      data: labels.map(() => labels),
+      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+    },
+    {
+      label: 'Dataset 2',
+      data: labels.map(() => labels),
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
+  ],
+};
 export default function Sales() {
+  
+ 
   return (
-    <div className="mt-10 h-[600px] bg-white rounded-lg  shadow-xl">
+  
+    <div className="mt-10  max-h-max bg-white rounded-lg  shadow-xl">
     <div className=" py-3">
      <div className="table-top px-3 py-3">
        <p>Bills And Orders</p>
@@ -29,8 +80,8 @@ export default function Sales() {
          </div>
 
        </div>
-       <div className="charts-table">
-
+       <div className="charts-table w-full">
+<Bar options={options} data={data}/>
        </div>
      </div>
     </div>

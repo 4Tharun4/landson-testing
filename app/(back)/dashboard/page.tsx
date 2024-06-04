@@ -2,6 +2,7 @@ import React from "react";
 import { ShoppingBag, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import Sales from "@/components/back-end/Sales";
+import CustomDatachart from "@/components/back-end/CustomDatachart";
 
 export default function page() {
   return (
@@ -116,6 +117,8 @@ export default function page() {
 
       {/* Bills and charts products */}
       <Sales/>
+      {/* Custom data with pagation */}
+      <CustomDatachart/>
       {/* <div className="mt-10 h-[500px] bg-red-300 shadow-lg">
        <div className=" ">
         <div className="table-top px-3 py-3">
