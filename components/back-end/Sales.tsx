@@ -81,7 +81,7 @@ export default function Sales() {
 
        </div>
        <div className="charts-table w-full">
-<Bar options={options} data={data}/>
+
        </div>
      </div>
     </div>

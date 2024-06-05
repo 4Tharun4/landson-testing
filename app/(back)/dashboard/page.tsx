@@ -119,35 +119,7 @@ export default function page() {
       <Sales/>
       {/* Custom data with pagation */}
       <CustomDatachart/>
-      {/* <div className="mt-10 h-[500px] bg-red-300 shadow-lg">
-       <div className=" ">
-        <div className="table-top px-3 py-3">
-          <p>Bills And Orders</p>
-        </div>
-        <div className="charts-data flex flex-col">
-          <div className="boxes ">
-            <div className="containers px-3  grid  grid-cols-4  gap-5 mobile:grid mobile:grid-cols-1 ">
-              <div className="box-1 w-[100%]  bg-gray-200 h-[100px] ">
-               <p>Awaiting Delivery</p>
-              </div>
-              <div className="box-1 w-[100%]  bg-gray-200 h-[100px] ">
-               <p>Awaiting Delivery</p>
-              </div>
-              <div className="box-1 w-[100%]  bg-gray-200 h-[100px] ">
-               <p>Awaiting Delivery</p>
-              </div>
-              <div className="box-1 w-[100%]  bg-gray-200 h-[100px] ">
-               <p>Awaiting Delivery</p>
-              </div>
-            </div>
-
-          </div>
-          <div className="charts-table">
-
-          </div>
-        </div>
-       </div>
-      </div> */}
+     
     </>
   );
 }
