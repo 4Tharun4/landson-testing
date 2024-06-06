@@ -1,19 +1,35 @@
+import { BaggageClaim, BarChart2, CircleUserRound, LayoutGrid, ReceiptIndianRupee, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
 export default function Sidebar() {
   return (
-    <div className='  mobile:hidden  tablet:w-20  text-black   bg-white  shadow-xl fixed top-16 space-y-6 w-52  h-screen   mobile:w-0 '   >
-      <div className="links space-y-3 flex flex-col gap-10 justify-center ">
-        <Link href={'/dashboard'}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
-          Dashboard</Link>
-        <Link href={"/dashboard/sales"}>Sales</Link>
-        <Link href={"/dashboard/customers"}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Customers</Link>
-        <Link href={"/dashboard/products"}>Products</Link>
-        <Link href={"#"}>Settings</Link>
+    <div className='  px-4   mobile:hidden  tablet:w-20  text-black   bg-white  shadow-xl fixed top-16 space-y-6 w-52  h-screen   mobile:w-0 '   >
+      <div className="flex space-y-3 gap-6 flex-col mt-14">
+        <Link href={"/dashboard"} className='flex items-center space-x-3 '>
+        <LayoutGrid />
+          <span>Dashboard</span>
+        </Link>
+        <Link href={"/dashboard/products"} className='flex items-center space-x-3'>
+        <ShoppingBag />
+          <span>Products</span>
+        </Link>
+        <Link href={"/dashboard/customers"} className='flex items-center space-x-3'>
+        <CircleUserRound />
+          <span>Customers</span>
+        </Link>
+        <Link href={"/dashboard/sales"} className='flex items-center space-x-3'>
+        <BarChart2 />
+          <span>Sales</span>
+        </Link>
+        <Link href={"/dashboard/tranactions"} className='flex items-center space-x-3'>
+        <ReceiptIndianRupee />
+          <span>Transactions</span>
+        </Link>
+        <Link href={"/dashboard/orders"} className='flex items-center space-x-3'>
+        <BaggageClaim />
+          <span>Orders</span>
+        </Link>
       </div>
     </div>
   )
