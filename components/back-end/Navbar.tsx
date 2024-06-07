@@ -13,7 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { CircleGauge, LogOut, Settings } from 'lucide-react'
+import { Bell, CircleGauge, LogOut, Menu, Settings, X } from 'lucide-react'
 
 
 export default function Navbar() {
@@ -26,12 +26,43 @@ export default function Navbar() {
         <div className="menu-icon flex gap-3">
           <Link href="/dashboard">
         <Image src={Logo} alt='logo' width={101} height={101}/></Link>
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-align-justify"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg></button>
-        </div>
-        <div className="right-icons   space-x-4 flex">
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
             <button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+              <Menu color="#ffffff" /></button>
+        </div>
+        <div className="right-icons   space-x-5 flex">   
+        <DropdownMenu>
+  <DropdownMenuTrigger> <Bell color="#ffffff" />
+            <div className=" absolute inline-flex  items-center justify-center w-6 h-6 text-xs font-bold  text-white bg-red-500 rounded-full top-2 right-22">
+              20
+            </div></DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>Notifications</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>
+      <div className=" flex items-center  space-x-2">
+        <Image src={pic} width={200} height={200} alt='notification image' className='rounded-full w-8 h-8'/>
+        <div className="fle flex-col">
+          <p>This is notification</p>
+          <div className="flex space-x-1 ">
+            <p className='bg-red-500 px-3 py-0.5 text-white  rounded-xl  '>Out of Stock</p>
+            <p>May 20 2024 - 12:59</p>
+          </div>
+          
+        </div>
+        <button>
+            <X/>
+          </button>
+      </div>
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+    <LogOut className="mr-2 h-4 w-4" />
+      Logout</DropdownMenuItem>
+    
+  </DropdownMenuContent>
+</DropdownMenu>   
+            <button>
+              
+           
             </button>
             <button>
             <DropdownMenu >
