@@ -122,6 +122,7 @@ export default function Sidebar({}) {
               const Icons = Itemes.icon;
               return (
                 <Link
+                 key={i}
                   href={Itemes.href}
                   className={
                     Itemes.href == pathname
